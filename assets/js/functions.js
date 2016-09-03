@@ -1,6 +1,29 @@
 
+$(function(){
+  mentoringBubbleClick();
+});
+
+function mentoringBubbleClick() {
+  // click face -
+  // get distance of face from its parent
+  // move whole container up 115px + count
+  // add .is-open class to face
+  $('.face').on('click', function(){
+
+    var $this = $(this),
+        faceTop = $(this).position().top,
+        vertMath = -(faceTop - 230);
+
+    $this.parent().css('top', vertMath + 'px' )
+
+    $(this).addClass('has-bubble-open')
+      .siblings().removeClass('has-bubble-open')
+  });
+}
+
 $(window).scroll(function(){
   youtubeVidScroll();
+  startMentoring();
 });
 
 
@@ -8,8 +31,16 @@ function youtubeVidScroll() {
   var wScroll = $(window).scrollTop();
 
   $('.video-strip').css('background-position', 'center -' + wScroll + 'px');
-  console.log(wScroll);
 }
 
+function startMentoring() {
+  var wScroll = $(window).scrollTop();
 
+  if($('section.mentoring').offset().top - 500 < wScroll) {
+    $('.faces').addClass('launched');
 
+    setTimeout(function(){
+      $('.face:nth-child(3)').addClass('has-bubble-open');
+    }, 400)
+  }
+}
