@@ -32,8 +32,13 @@
 // columns
 
 .col-1
+  //width: 100% // You can stay for now
   max-width: 300px
   margin: 0 10px
+
+@media (max-width: 640px) // This is all to deal with width hack above
+  .col-1
+    //width: inherit;
 
 .col-2
   max-width: 620px
@@ -72,5 +77,8 @@
   &.outdented
     text-indent: -0.75em
 
-    @media (max-width: 640px)
+@media (max-width: 640px)
+  .home-lead 
+    text-align: center
+    &.outdented
       text-indent: 0
