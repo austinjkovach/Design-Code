@@ -21,7 +21,7 @@ function mentoringBubbleClick() {
       $this.parent().css('top', vertMath + 'px' )
       $(this).addClass('has-bubble-open')
         .siblings().removeClass('has-bubble-open')
-    } 
+    }
     else {
       if($this.hasClass('back-btn')) {
         mentoringNarrowStart();
@@ -49,7 +49,7 @@ function youtubeVidScroll() {
 
 function startMentoring() {
   var wScroll = $(window).scrollTop();
-  
+
   if($('section.mentoring').offset().top - 500 < wScroll) {
     if(wScroll && $(window).width() > 640) {
       $('.faces').addClass('launched');
@@ -60,7 +60,9 @@ function startMentoring() {
       }
     }
     else {
-      mentoringNarrowStart();
+      if(!$('.face').hasClass('has-bubble-open')) {
+        mentoringNarrowStart();
+      }
     }
   }
 }
