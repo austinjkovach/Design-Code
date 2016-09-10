@@ -799,17 +799,20 @@ section.articles {
     transition: all 200ms ease-in-out;
     opacity: 0; }
     section.articles .article-meta .name {
-      font-size: 18px; }
+      font-size: 18px;
+      line-height: 1.2; }
     section.articles .article-meta .date {
       font-style: italic; }
   section.articles .article-thumb:hover .article-meta {
     opacity: 1;
     -webkit-transform: translate(0%, 0%) scale(1);
             transform: translate(0%, 0%) scale(1); }
-
-@media (max-width: 640px) {
-  .desc-wrap {
-    margin-top: 100px; } }
+  @media (max-width: 640px) {
+    section.articles .desc-wrap {
+      margin-top: 100px; } }
+  @media (max-width: 999px) and (min-width: 640px) {
+    section.articles .article-thumb {
+      width: 33.33%; } }
 
 .home-wrap {
   display: -ms-flexbox;
