@@ -9,8 +9,8 @@ section.articles
     width: calc(100% - 20px)
 
   .home-cta
-    color: white;
-    background: #3d96cb;
+    color: white
+    background: #3d96cb
 
   .article-wrap
     margin: -50px 0
@@ -25,6 +25,17 @@ section.articles
     float: left
     position: relative
     overflow: hidden
+    opacity: 0
+    transition: all 300ms ease-in-out
+
+    &.is-visible
+      opacity: 1
+
+    &.is-emph
+      animation-name: tada
+      animation-duration: 1s
+      animation-fill-mode: both
+      z-index: 1
 
     &:after
       content: ''
@@ -62,3 +73,64 @@ section.articles
   @media (max-width: 999px) and (min-width: 640px)
     .article-thumb
       width: 33.33%
+
+
+
+@-webkit-keyframes tada
+  from
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
+  10%, 20%
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+
+
+  30%, 50%, 70%, 90%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+
+  40%, 60%, 80%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+
+  to
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
+
+@keyframes tada
+  from
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
+  10%, 20%
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+
+
+  30%, 50%, 70%, 90%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+
+  40%, 60%, 80%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+
+  to
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
+
+.tada
+  -webkit-animation-name: tada
+  animation-name: tada
+
