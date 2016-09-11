@@ -435,15 +435,6 @@ a {
 a:hover, a:focus {
   color: #d89993; }
 
-::-moz-selection {
-  background: #FFF498; }
-
-::selection {
-  background: #FFF498; }
-
-::-moz-selection {
-  background: #FFF498; }
-
 img::-moz-selection {
   background: transparent; }
 
@@ -764,6 +755,9 @@ section.articles {
     -ms-flex-align: center;
         align-items: center;
     width: calc(100% - 20px); }
+    @media (max-width: 640px) {
+      section.articles .col-1 {
+        display: block; } }
   section.articles .home-cta {
     color: white;
     background: #3d96cb; }
@@ -863,6 +857,27 @@ section.articles {
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada; }
+
+section.vine {
+  background-color: #00bf8f;
+  background-image: url(../img/vine-bg.jpg);
+  background-size: cover;
+  color: white; }
+  section.vine iframe {
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3); }
+  section.vine .home-cta {
+    color: #00bf8f; }
+  section.vine .description {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+
+@media (max-width: 640px) {
+  .col-1 {
+    text-align: center; }
+    .col-1.description {
+      margin-top: 50px; } }
 
 .home-wrap {
   display: -ms-flexbox;
