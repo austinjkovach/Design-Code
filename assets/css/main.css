@@ -936,13 +936,10 @@ section.notes {
       padding-right: 30px;
       text-align: right;
       border-right: solid 2px white; }
-    @media (max-width: 640px) {
-      section.notes .col-1 {
-        padding: 0; }
-        section.notes .col-1:first-child {
-          padding: 0;
-          text-align: left;
-          border: none; } }
+      section.notes .col-1:first-child:first-child {
+        padding: 0;
+        text-align: left;
+        border: none; }
   @media (max-width: 640px) {
     section.notes .col-2 {
       margin: 0; } }
