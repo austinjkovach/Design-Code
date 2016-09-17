@@ -889,9 +889,10 @@ section.design {
     font-size: 30px; }
   section.design .dribbble, section.design .behance {
     background-color: #ea4c89;
-    background-iamge: url(/assets/img/design-bg.png);
+    background-image: url(/assets/img/design-bg.png);
     background-position: center;
-    padding: 50px 0; }
+    padding: 50px 0;
+    transition: background-color 150ms ease-in-out; }
     section.design .dribbble.behance, section.design .behance.behance {
       background-color: #1769ff; }
       section.design .dribbble.behance .home-cta, section.design .behance.behance .home-cta {
@@ -905,13 +906,132 @@ section.design {
     width: calc(50% - 14px);
     border: 2px solid white;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-    margin: 5px; }
+    margin: 5px;
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out; }
+    section.design .design-img-link:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
     section.design .design-img-link img {
       width: 100%;
       display: block; }
   section.design .cf {
     clear: both;
     margin-bottom: 20px; }
+
+section.notes {
+  background-image: url(../img/notes-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white; }
+  section.notes .home-lead {
+    text-align: center; }
+  section.notes .col-1 {
+    padding-left: 30px;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.8; }
+    section.notes .col-1:first-child {
+      padding-left: 0;
+      padding-right: 30px;
+      text-align: right;
+      border-right: solid 2px white; }
+      section.notes .col-1:first-child:first-child {
+        padding: 0;
+        text-align: left;
+        border: none; }
+  @media (max-width: 640px) {
+    section.notes .col-2 {
+      margin: 0; } }
+  section.notes a {
+    color: white;
+    text-decoration: underline; }
+  section.notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  section.notes p {
+    margin: 0; }
+  section.notes .form-display {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px 0; }
+    @media (max-width: 590px) {
+      section.notes .form-display {
+        display: block; } }
+  section.notes .mc-field-group {
+    position: relative;
+    -ms-flex: 2;
+        flex: 2; }
+    section.notes .mc-field-group:first-child {
+      border-right: 4px solid white; }
+      @media (max-width: 590px) {
+        section.notes .mc-field-group:first-child {
+          border-right: none;
+          border-bottom: 4px solid white; } }
+  section.notes input {
+    position: relative;
+    border: 0;
+    background: none;
+    padding: 0;
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 18px; }
+    @media (max-width: 640px) {
+      section.notes input {
+        padding: 0; }
+        section.notes input[type="submit"] {
+          padding: 0; } }
+    section.notes input:focus {
+      outline: none; }
+    section.notes input[type="submit"] {
+      -ms-flex: 1;
+          flex: 1;
+      background: white;
+      color: #ba9e44;
+      font-size: 24px;
+      padding: 0 15px; }
+  section.notes label {
+    position: absolute;
+    z-index: 2;
+    font-size: 12px;
+    left: 5px; }
+
+section.podcast {
+  background-image: url(../img/podcast-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white; }
+  section.podcast .podcast-content {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px; }
+  section.podcast .podcast-thumb {
+    margin-right: 30px; }
+  section.podcast .podcast-text {
+    -ms-flex: 1;
+        flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  section.podcast .title {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 20px; }
+  section.podcast .web {
+    color: white;
+    background: #8d16de; }
+  section.podcast .itunes {
+    color: white;
+    background: #13cbdf; }
 
 .home-wrap {
   display: -ms-flexbox;
@@ -947,8 +1067,8 @@ section.design {
 
 .col-2 {
   max-width: 620px;
-  margin: 0 10px;
-  background: honeydew; }
+  width: 100%;
+  margin: 0 10px; }
 
 .col-50 {
   width: 50%;

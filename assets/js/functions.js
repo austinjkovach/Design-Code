@@ -6,7 +6,23 @@ $(function(){
     articleTada();
   }, 4000);
 
+  designBGStuff();
+
 });
+
+function designBGStuff() {
+  // .design-img-link hover:
+
+  $('.design-img-link').hover(function(){
+  // find a color > apply that color to the bg
+    $(this).parent().parent().css('background-color', $(this).data('color'))
+  }, function(){
+  // off > revert the color
+    $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'))
+
+  })
+}
+
 
 function mentoringBubbleClick() {
   // click face -
